@@ -19,7 +19,7 @@ public class DirectorsController {
     private final DirectorService directorService;
 
     /**
-     * Добавляем новый Director
+     * Создание режиссёра
      */
     @PostMapping
     public Director addDirector(@Valid @RequestBody Director director) throws DirectorNotFound {
@@ -27,7 +27,7 @@ public class DirectorsController {
     }
 
     /**
-     * Получаем всех Director
+     * Список всех режиссёров
      */
     @GetMapping
     public List<Director> getAllDirectors() {
@@ -35,7 +35,7 @@ public class DirectorsController {
     }
 
     /**
-     * Получаем Director по id
+     * Получение режиссёра по id
      */
     @GetMapping("/{id}")
     public Director getDirectorById(@PathVariable int id) throws DirectorNotFound {
@@ -43,7 +43,7 @@ public class DirectorsController {
     }
 
     /**
-     * Изменяем существующего Director
+     * Изменение режиссёра
      */
     @PutMapping
     public Director updateDirector(@Valid @RequestBody Director director) throws DirectorNotFound {
@@ -51,7 +51,7 @@ public class DirectorsController {
     }
 
     /**
-     * Удаляем Director
+     * Удаление режиссёра
      */
     @DeleteMapping("/{id}")
     public void deleteDirectorById(@PathVariable int id) throws DirectorNotFound {
